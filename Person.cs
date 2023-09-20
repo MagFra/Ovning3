@@ -15,7 +15,7 @@ namespace Ovning3
 			get { return age; }
 			set 
 			{ 
-				if (value == 0) { throw new ArgumentException("Age can not be zero!", nameof(Age)); }
+				if (value == 0) { throw new ArgumentException("Age can not be zero!", nameof(value)); }
 				age = value; 
 			}
 		}
@@ -29,7 +29,7 @@ namespace Ovning3
 				if ( string.IsNullOrWhiteSpace( value ) || value.Length < 3 || value.Length > 10 ) 
 				{ 
 					fName = string.Empty;
-					throw new ArgumentException("FNamn is mandatory and must be between 3 and 10 characters long!", nameof(FName)); 
+					throw new ArgumentException("FNamn is mandatory and must be between 3 and 10 characters long!", nameof(value)); 
 				}
 				fName = value; 
 			}
@@ -44,7 +44,7 @@ namespace Ovning3
                 if (string.IsNullOrWhiteSpace(value) || value.Length < 3 || value.Length > 15)
                 {
 					lName = string.Empty;
-                    throw new ArgumentException("LNamn is mandatory and must be between 3 and 15 characters long!", nameof(LName));
+                    throw new ArgumentException("LNamn is mandatory and must be between 3 and 15 characters long!", nameof(value));
                 }
                 lName = value; 
 			}
@@ -56,7 +56,7 @@ namespace Ovning3
 			get { return height; }
 			set
             {
-                if (value < (float)0.15 || value > (float)3.5) { throw new ArgumentException("Height must be between 0.15 and 3.5 meters!", nameof(Height)); }
+                if (value < (float)0.15 || value > (float)3.5) { throw new ArgumentException("Height must be between 0.15 and 3.5 meters!", nameof(value)); }
                 height = value;
 			}
 		}
@@ -67,7 +67,7 @@ namespace Ovning3
 			get { return weight; }
 			set
             {
-                if (value < (float)0.1 || value > (float)305) { throw new ArgumentException("Weight must be between 0.100 and 305 kg!", nameof(Weight)); }
+                if (value < (float)0.1 || value > (float)305) { throw new ArgumentException("Weight must be between 0.100 and 305 kg!", nameof(value)); }
                 weight = value; 
 			}
 		}
