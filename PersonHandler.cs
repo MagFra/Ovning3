@@ -6,29 +6,29 @@ using System.Threading.Tasks;
 
 namespace Ovning3
 {
-    internal class PersonHandler
+    internal static class PersonHandler
     {
-        public void SetAge(Person pers, uint age) { pers.Age = age; }
-        public uint GetAge(Person pers) => pers.Age;
-        public void SetFName(Person pers, string fName) { pers.FName = fName;}
-        public string GetFName(Person pers) => pers.FName;  
-        public void SetLName(Person pers, string lName) { pers.LName = lName;}
-        public string GetLName(Person pers) => pers.LName; 
-        public void SetHeight(Person pers, float height) {  pers.Height = height;}
-        public float GetHeight(Person pers) => pers.Height;
-        public void SetWeight(Person pers, float weight) { pers.Weight = weight;}
-        public float GetWeight(Person pers) => pers.Weight;
+        public static void SetAge(Person pers, uint age) => pers.Age = age;
+        public static uint GetAge(Person pers) => pers.Age;
+        public static void SetFName(Person pers, string fName) => pers.FName = fName;
+        public static string GetFName(Person pers) => pers.FName;
+        public static void SetLName(Person pers, string lName) => pers.LName = lName;
+        public static string GetLName(Person pers) => pers.LName; 
+        public static void SetHeight(Person pers, float height) => pers.Height = height;
+        public static float GetHeight(Person pers) => pers.Height;
+        public static void SetWeight(Person pers, float weight) => pers.Weight = weight;
+        public static float GetWeight(Person pers) => pers.Weight;
 
 
-        public Person CreatePerson(int age, string fname, string lname, double height, double weight)
+        public static Person CreatePerson(uint age, string fname, string lname, float height, float weight)
         {
             var person = new Person()
             {
-                Age = (uint)age,
+                Age = age,
                 FName = fname,
                 LName = lname,
-                Height = (float)height,
-                Weight = (float)weight
+                Height = height,
+                Weight = weight
             };
             return person;
         }
